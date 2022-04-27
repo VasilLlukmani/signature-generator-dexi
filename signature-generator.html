@@ -4,9 +4,10 @@
     body{
       display: flex;
     }
-    input {
+    input,select {
     background: linear-gradient(rgba(99, 106, 150, 0.4) 0%, rgba(182, 186, 214, 0.25) 100%);
     border: none;
+    text-align: center;
     border-radius: 30px;
     box-shadow: rgb(0 0 0 / 15%) 0px 20px 40px, rgb(255 255 255 / 30%) 0px 0px 0px 0.5px inset;
     box-sizing: border-box;
@@ -15,7 +16,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 130%;
-    color: rgb(255, 255, 255);
+    color: #ffffffc2;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
 }
 button {
@@ -56,7 +57,14 @@ input::placeholder {
           <div class="form">
             <input type="text" id="Name" value="" placeholder="Name">
             <input type="text" id="Position" value="" placeholder="Position">
-            <input type="text" id="Location" value="" placeholder="Location">
+            <!-- <input type="text" id="Location" value="" placeholder="Location"> -->
+            <select id="Location" name="location" >
+              <option value="Tirane, ALBANIA<">Tirane, ALBANIA</option>
+              <option value="London, UK">London, UK</option>
+              <option value="Copenhagen, DENMARK">Copenhagen, DENMARK</option>
+              <option value="Salt Lake City, USA">Salt Lake City, USA</option>
+              <option value="Boston, USA">Boston, USA</option>
+            </select>
             <button type="button" onclick="changeValues()">Generate</button> 
           </div>    
         </div>
@@ -108,34 +116,34 @@ img {
     text-decoration: none !important;
 }
 </style>
-    <table>
-      <tr>
-            <td>
-              <a href="https://www.dexi.io/">
-              <img src="https://www.dexi.io/wp-content/uploads/2022/04/dexi-sign-s.png" width="120"  alt="dexi.io logo" style="padding-top: 2px;"/>
-              </a>
-            </td>
-            <td style="border-left: 0px solid #8DC450;">
-              <p style="padding-bottom: 8px;">
-                <strong id="name" style="color: #25E4AE;font-size: 24px;letter-spacing: 1.2;font-weight: 600;line-height: 32px;">Name Surname</strong>
-                <br/>
-                <span id="position" style="color: #003D59;font-weight: 500;text-transform: uppercase;letter-spacing: 1;font-size: 12px;">Position</span>
-              </p>
-              <p class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
-              <img src='https://www.dexi.io/wp-content/uploads/2022/04/location-s-2.png' height="14" alt="location icon" style="padding-right: 10px;" />
-                <span id="location">Location</span>
-              </p>
-              <p class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
-                <img src='https://www.dexi.io/wp-content/uploads/2022/04/phone-s.png' height="14" alt="webpage icon" style="padding-right: 10px;"  />
-                +1 801 889 1135
-              </p>   
-                <p class="data-row">
-            <a style="text-decoration: none;vertical-align: middle;color:#25E4AE;font-size: 11px;" href="https://www.dexi.io/">DEXI IN 60 SECONDS </span>|</a> 
-            <a style="color:#25E4AE;text-decoration: none;vertical-align: middle; font-size: 11px;" href="https://www.mozenda.com/">BOOK A MEETING</a>
-              </p>
-            </td>
-      </tr>
-    </table>
+      <table>
+        <tr>
+              <td>
+                <a href="https://www.dexi.io/">
+                <img src="https://www.dexi.io/wp-content/uploads/2022/04/dexi-sign-s.png" width="120"  alt="dexi.io logo" style="padding-top: 2px;"/>
+                </a>
+              </td>
+              <td style="border-left: 0px solid #8DC450;">
+                <p style="padding-bottom: 8px;">
+                  <strong id="name" style="color: #25E4AE;font-size: 24px;letter-spacing: 1.2;font-weight: 600;line-height: 32px;">Name Surname</strong>
+                  <br/>
+                  <span id="position" style="color: #003D59;font-weight: 500;text-transform: uppercase;letter-spacing: 1;font-size: 12px;">Position</span>
+                </p>
+                <p class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
+                 <img src='https://www.dexi.io/wp-content/uploads/2022/04/location-s-2.png' height="14" alt="location icon" style="padding-right: 10px;" />
+                  <span id="location">Location</span>
+                </p>
+                <p class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
+                  <img src='https://www.dexi.io/wp-content/uploads/2022/04/phone-s.png' height="14" alt="webpage icon" style="padding-right: 10px;"  />
+                  +1 801 889 1135
+                </p>   
+                  <p class="data-row">
+              <a style="text-decoration: none;vertical-align: middle;color:#25E4AE;font-size: 11px;" href="https://www.dexi.io/">DEXI IN 60 SECONDS </span>|</a> 
+              <a style="color:#25E4AE;text-decoration: none;vertical-align: middle; font-size: 11px;" href="https://www.mozenda.com/">BOOK A MEETING</a>
+                </p>
+              </td>
+        </tr>
+      </table>
   </div>
 
 
