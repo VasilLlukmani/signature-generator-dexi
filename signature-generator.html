@@ -46,7 +46,7 @@ button:hover{
     flex-direction: column;
     max-width: 400px;
     justify-content: space-around;
-    height: 280px;
+    height: 386px;
 }
 input::placeholder {
     color: #ffffffc2;
@@ -63,16 +63,17 @@ input::placeholder {
             </h1>
             <h2 style="color: #25E4AE;font-size: 18px;letter-spacing: 1.2;font-weight: 100;padding: 20px 10px;font-family: 'Montserrat', 'Verdana', sans-serif">Enter values:</h2>
           <div class="form">
-            <input type="text" id="Name" value="" placeholder="Name">
-            <input type="text" id="Position" value="" placeholder="Position">
+            <input type="text" id="Name" value="" placeholder="Name" required>
+            <input type="text" id="Position" value="" placeholder="Position" required>
             <!-- <input type="text" id="Location" value="" placeholder="Location"> -->
-            <select id="Location" name="location" >
+            <select id="Location" name="location" required>
               <option value="Tirane, ALBANIA<">Tirane, ALBANIA</option>
               <option value="London, UK">London, UK</option>
               <option value="Copenhagen, DENMARK">Copenhagen, DENMARK</option>
               <option value="Salt Lake City, USA">Salt Lake City, USA</option>
               <option value="Boston, USA">Boston, USA</option>
             </select>
+            <input type="tel" id="Phone" name="phone" placeholder="Phone number (optional)" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" ><br><br>
             <button type="button" onclick="changeValues()">Generate</button> 
           </div>    
         </div>
@@ -141,9 +142,9 @@ img {
                  <img src='https://www.dexi.io/wp-content/uploads/2022/04/location-s-2.png' height="14" alt="location icon" style="padding-right: 10px;" />
                   <span id="location">Location</span>
                 </p>
-                <p class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
-                  <img src='https://www.dexi.io/wp-content/uploads/2022/04/phone-s.png' height="14" alt="webpage icon" style="padding-right: 10px;"  />
-                  +1 801 889 1135
+                <p id="phone-container" class="data-row" style="color: #6d6d6d;font-weight: 500;letter-spacing: 1;">
+                <img src='https://www.dexi.io/wp-content/uploads/2022/04/phone-s-2.png' height="14" alt="webpage icon" style="padding-right: 10px;"  />
+                 <span id="phone">+1065565166</span>         
                 </p>   
                   <p class="data-row">
               <a style="text-decoration: none;vertical-align: middle;color:#25E4AE;font-size: 11px;" href="https://www.dexi.io/">DEXI IN 60 SECONDS </span>|</a> 
@@ -168,14 +169,23 @@ img {
   
   <script>
       
-    // Here the value is stored in new variables x,y,z
+    // Here the value is stored in new variables x,y,z,v
     function changeValues() {
         var x = document.getElementById("Name").value;
         var y = document.getElementById("Position").value;
         var z = document.getElementById("Location").value;
+        var v = document.getElementById("Phone").value;
         document.getElementById("name").innerHTML = x;
         document.getElementById("position").innerHTML = y;
         document.getElementById("location").innerHTML = z;
+        if(document.getElementById("Phone").value.length == 0){
+          document.getElementById("phone-container").style.visibility = "hidden";
+        }
+        else
+        {
+          document.getElementById("phone-container").style.visibility = "visible";
+          document.getElementById("phone").innerHTML = v;
+        }
 
 
     }
