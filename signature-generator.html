@@ -28,9 +28,17 @@ button {
     display: grid;
     text-align: center;
     padding: 12px 0px;
+    margin-top: 20px;
     position: relative;
     -webkit-box-pack: center;
     justify-content: center;
+    color: #003d59;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+button:hover{
+  box-shadow: none;
+  transform: translateY(-2px);
 }
 
 .form {
@@ -38,7 +46,7 @@ button {
     flex-direction: column;
     max-width: 400px;
     justify-content: space-around;
-    height: 240px;
+    height: 280px;
 }
 input::placeholder {
     color: #ffffffc2;
@@ -153,7 +161,7 @@ img {
 
 
 <!-- <button onclick="copyToClipboard('#signature')">Copy to Clipboard</button> -->
-<img onclick="copyToClipboard('#signature')" src="https://www.dexi.io/wp-content/uploads/2022/04/copy-svgrepo-com-1.svg" width="40px" style="position: absolute;bottom: 50px;right: 15px;opacity: .6;">
+<img onclick="copyToClipboard('#signature')" src="https://www.dexi.io/wp-content/uploads/2022/04/copy-svgrepo-com-1.svg" width="40px" style="position: absolute;bottom: 50px;right: 15px;opacity: .6;cursor: pointer;" tile="Copy" alt="">
 <div id="success" style="display:none;position: absolute;bottom: 15px;right: 15px; color: #25E4AE;font-weight: 100;font-family: 'Montserrat', 'Verdana', sans-serif;">Copied!</div>
 
 
